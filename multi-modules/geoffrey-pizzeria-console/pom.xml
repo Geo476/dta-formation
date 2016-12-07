@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 
-	<artifactId>pizzeria-console</artifactId>
+	<artifactId>geoffrey-pizzeria-console</artifactId>
 
 	<parent>
 		<groupId>pizzeria</groupId>
-		<artifactId>pizzeria-parent</artifactId>
+		<artifactId>geoffrey-pizzeria-parent</artifactId>
 		<version>1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -52,11 +52,11 @@
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>pizzeria-dao</artifactId>
+			<artifactId>geoffrey-pizzeria-dao</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>pizzeria-model</artifactId>
+			<artifactId>geoffrey-pizzeria-model</artifactId>
 		</dependency>
 	</dependencies>
 

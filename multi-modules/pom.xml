@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pizzeria</groupId>
-	<artifactId>pizzeria-parent</artifactId>
+	<artifactId>geoffrey-pizzeria-parent</artifactId>
 	<version>1</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>pizzeria-dao</module>
-		<module>pizzeria-model</module>
-		<module>pizzeria-console</module>
+		<module>geoffrey-pizzeria-dao</module>
+		<module>geoffrey-pizzeria-model</module>
+		<module>geoffrey-pizzeria-console</module>
 	</modules>
 
 	<build>
@@ -42,12 +42,12 @@
 			</dependency>
 			<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>pizzeria-dao</artifactId>
+			<artifactId>geoffrey-pizzeria-dao</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>pizzeria-model</artifactId>
+			<artifactId>geoffrey-pizzeria-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		</dependencies>
