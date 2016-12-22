@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.List" %>
+<%@ page import="fr.pizzeria.model.Pizza" %>    
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>TITRE_TEST_DT</title>
+</head>
+<body>
+
+<table>
+
+<%
+List<Pizza> pizzas = (List<Pizza>)request.getAttribute("Pizzas");
+
+
+for(Pizza p: pizzas) {
+
+%>
+	
+	
+		<tr> 
+				<td> <%= p.getId()%></td>
+				<td><dd> <%= p.getCode()%></td>
+				<td><dd> <%= p.getNom() %></td>
+				<td><dd> <%= p.getPrix()%></td>
+				<td><dd> <%= p.getCat()%></td>
+				<td><dd> <img title="Reine" src="<%p.getUrl()%>" /></td>
+				
+		
+		</tr>
+		
+	
+<% 	
+}
+%>
+
+</table>
+
+</body>
+</html>

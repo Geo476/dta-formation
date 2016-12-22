@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project\pizzeria-admin-app"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-admin-app"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project\pizzeria-console-client"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project\pizzeria-model"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project\pizzeria-dao"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project\pizzeria-console"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project"/>
+			<item value="C:\Users\ETY12\Documents\git\Java\Java2\Java2\pizzeria-project\pizzeria-model\src\main\java\fr\pizzeria"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="dta.pizzeria_admin_app"/>
+			<item value="dta.pizzeria_admin_web"/>
+			<item value="dta.pizzeria_console_client"/>
+		</list>
+		<list key="groupId">
+			<item value="dta"/>
+		</list>
+		<list key="artifactId">
+			<item value="pizzeria-admin-app"/>
+			<item value="pizzeria-admin-web"/>
+			<item value="pizzeria-console-client"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

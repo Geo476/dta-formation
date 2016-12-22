@@ -16,14 +16,14 @@
 
  
 
-<c:forEach var="Pizza" items="${Pizzas}">
+<c:forEach var="pizza" items="${Pizzas}">
 
 	<tr>
-		<td> ${Pizza.id} </td>
-		<td><dd> ${Pizza.code} </td>
-		<td><dd> ${Pizza.nom}</td>
-		<td><dd> ${Pizza.prix}</td>
-		<td><dd> ${Pizza.cat} </td>
+		<td> ${pizza.id} </td>
+		<td><dd> ${pizza.code} </td>
+		<td><dd> ${pizza.nom}</td>
+		<td><dd> ${pizza.prix}</td>
+		<td><dd> ${pizza.cat} </td>
 		<td><dd> <img alt="photo_reine" title="reine" src="#" /> </td>
 		
 		<td><button type="button" class="btn btn-secondary">Modifier</button></td>

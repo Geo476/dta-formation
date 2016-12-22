@@ -1,0 +1,108 @@
+package fr.pizzeria.admin.web;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet Filter implementation class ManipFilter
+ */
+@WebFilter("/ManipFilter")
+public class ManipFilter implements Filter {
+
+	/*private FilterConfig config = null;
+	
+	public void init1(FilterConfig config) throws ServletException {
+		
+		this.config = config;
+		config.getServletContext().log("TimerFilter initialized");
+		
+	}*/
+	
+    /**
+     * Default constructor. 
+     */
+    public ManipFilter() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Filter#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 */
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+
+		
+	    /*    
+		HttpServletRequest req = (HttpServletRequest) request;
+        HttpSession session = req.getSession();
+        System.out.println(session.getAttributeNames().toString());
+        
+        if ((("").equals(session.getAttribute("email")))&&("").equals(session.getAttribute("password"))){
+     	   
+     	   
+        }
+               
+        else if ((("admin@pizzeria.fr").equals(session.getAttribute("email")))&&("admin").equals(session.getAttribute("password"))){
+    	   
+    	   chain.doFilter(request, response);
+
+  }
+       else {
+    	   ((HttpServletResponse) response).sendRedirect("/pizzeria-admin-app/login");
+           System.out.println("vous devez vous identifier");
+       }
+        */
+        
+		String login = request.getParameter("email");
+        String mdp = request.getParameter("password");
+        
+        // pass the request along the filter chain
+        if(login.isEmpty()||mdp.isEmpty())
+            System.out.println("Skud me");
+       
+        if(login.equals("admin@pizzeria.fr")&&(mdp.equals("admin")))
+        {
+            chain.doFilter(request, response);}
+        else{
+            ((HttpServletResponse) response).sendRedirect("/pizzeria-admin-app/login");
+            System.out.println("vous devez vous identifier");
+        }
+		
+		
+		
+		/*
+		long before = System.currentTimeMillis();
+		
+		chain.doFilter(request, response);
+		
+		long after = System.currentTimeMillis();
+		
+		String path = ((HttpServletRequest) request).getRequestURI();
+		config.getServletContext().log(path+" : "+ (after - before));
+		*/
+	}
+
+	/**
+	 * @see Filter#init(FilterConfig)
+	 */
+	public void init(FilterConfig fConfig) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+
+}

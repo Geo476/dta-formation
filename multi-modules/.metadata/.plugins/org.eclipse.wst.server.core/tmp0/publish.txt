@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Dec 22 12:04:40 CET 2016
+org.eclipse.jst.j2ee.server\:pizzeria-model=WEB-INF/lib/pizzeria-model-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:pizzeria-dao=WEB-INF/lib/pizzeria-dao-0.0.1-SNAPSHOT.jar

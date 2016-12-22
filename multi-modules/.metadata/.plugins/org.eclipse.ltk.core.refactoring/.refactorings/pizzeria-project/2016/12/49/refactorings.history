@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;PizzaDaoJdbc.java&apos; to &apos;dao&apos;&#x0D;&#x0A;- Original project: &apos;pizzeria-project&apos;&#x0D;&#x0A;- Destination element: &apos;dao&apos;&#x0D;&#x0A;- Original element: &apos;PizzaDaoJdbc.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" element1="PizzaDaoJdbc.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1481190243991" target="pizzeria-dao/src/main/java/fr/pizzeria/dao" units="0" version="1.0"/>
+</session>
