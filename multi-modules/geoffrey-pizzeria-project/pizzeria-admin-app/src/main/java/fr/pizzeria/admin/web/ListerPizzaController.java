@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.persistence.metamodel.SetAttribute;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,16 +14,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.pizzeria.dao.PizzaDao;
+import fr.pizzeria.admin.metier.PizzaService;
+import fr.pizzeria.admin.metier.PizzaServiceEJB;
+//import fr.pizzeria.dao.PizzaDao;
 import fr.pizzeria.model.Pizza;
 
 /**
  * Servlet implementation class ListerPizzaController
  */
-@WebServlet("/ListerPizzaController")
+@WebServlet(name="ListerPizzaController", urlPatterns="/pizzas/list")
 public class ListerPizzaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	 //@Inject private PizzaService servicep;
+	@EJB private PizzaServiceEJB pizEJB; 
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -30,7 +37,9 @@ public class ListerPizzaController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
+   
+    
+    /**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,30 +47,16 @@ public class ListerPizzaController extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		
-		ResourceBundle bundle = ResourceBundle.getBundle("application");
-		String daoConfig = bundle.getString("dao.impl");
 		
-		PizzaDao daoFactory;
-		try {
-			daoFactory = (PizzaDao) Class.forName(daoConfig).newInstance();
-			List<Pizza> pizzas = daoFactory.findAllPizzas();
-			
-			request.setAttribute("Pizzas", pizzas);
-			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/pizzas/listerPizzas.jsp");
-	        dispatcher.forward(request, response);
-			
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		request.setAttribute("Pizzas", pizEJB.findAllPizzas());
+		
+		
+		
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/pizzas/listerPizzas.jsp");
+        dispatcher.forward(request, response);
 		
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

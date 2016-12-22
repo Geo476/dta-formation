@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.pizzeria.dao.PizzaDao;
+//import fr.pizzeria.dao.PizzaDao;
 import fr.pizzeria.model.Pizza;
 
 
@@ -48,35 +48,35 @@ public class PizzaServletWebApi extends HttpServlet {
 			out.write("coucou");
 	*/
 		
-		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
+//		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
 		
-		ResourceBundle bundle = ResourceBundle.getBundle("application");
-		String daoConfig = bundle.getString("dao.impl");
+//		ResourceBundle bundle = ResourceBundle.getBundle("application");
+//		String daoConfig = bundle.getString("dao.impl");
 		
 		
 
 		
-		try {
+//		try {
 			
-				PizzaDao daoFactory = (PizzaDao) Class.forName(daoConfig).newInstance();
-				List<Pizza> pizzas = daoFactory.findAllPizzas();
+//				PizzaDao daoFactory = (PizzaDao) Class.forName(daoConfig).newInstance();
+//				List<Pizza> pizzas = daoFactory.findAllPizzas();
 				/*
 			for (Pizza p: utils.getPizzaDao().findAllPizzas()) {
 				System.out.println(p.toString());
 			}
 			System.out.println(utils.getPizzaDao().findAllPizzas().size() + " Pizzas");
 		*/
-		} catch (InstantiationException e) {
+//		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
+//			e.printStackTrace();
+//		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
-	}
+//	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
