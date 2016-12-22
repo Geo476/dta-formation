@@ -12,6 +12,7 @@ import javax.persistence.TypedQuery;
 import fr.pizzeria.Exception.DeletePizzaException;
 import fr.pizzeria.Exception.SavePizzaException;
 import fr.pizzeria.Exception.UpdatePizzaException;
+import fr.pizzeria.model.Client;
 import fr.pizzeria.model.Pizza;
 
 public class PizzaDaoJpa implements PizzaDao{
@@ -89,6 +90,7 @@ public class PizzaDaoJpa implements PizzaDao{
 			p.setNom(pizza.getNom());
 			p.setPrix(p.getPrix());
 			p.setCat(p.getCat());
+			p.setUrl(p.getUrl());
 			
 		}
 		
@@ -137,5 +139,6 @@ public class PizzaDaoJpa implements PizzaDao{
 		return findPizzaByCode(codePizza).isPresent();
 		
 	}
+
 
 }

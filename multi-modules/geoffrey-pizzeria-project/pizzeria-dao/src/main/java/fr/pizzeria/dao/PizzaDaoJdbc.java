@@ -52,8 +52,9 @@ public class PizzaDaoJdbc implements PizzaDao {
 					String name = resultats.getString("LIBELLE"); 
 					BigDecimal price = resultats.getBigDecimal("PRIX");
 					CategoriePizza cat = CategoriePizza.valueOf(resultats.getString("CATEGORIE"));
+					String url = resultats.getString("URL_IMG");
 
-					pizzas.add(new Pizza(id, code, name, price.doubleValue(), cat));
+					pizzas.add(new Pizza(id, code, name, price.doubleValue(), cat,url));
 					
 					}
 				

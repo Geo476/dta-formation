@@ -3,15 +3,15 @@ package fr.pizzeria.model;
 public enum CategoriePizza {
 
 	VIANDE("Viande"), POISSON("Poisson"), SANS_VIANDE("Sans Viande");
-	private String name = "";
-
-	// Constructeur
-	CategoriePizza(String name) {
-		this.name = name;
+	
+	private String value;
+	
+	private CategoriePizza(String value) {
+		
+		this.value = value;
 	}
-
-	public String toString() {
-		return name;
-	}
-
+	
+	
+	public  String getValue() { return value; }
+	
 }

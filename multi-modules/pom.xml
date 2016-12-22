@@ -1,23 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>pizzeria</groupId>
-	<artifactId>geoffrey-pizzeria-parent</artifactId>
-	<version>1</version>
-	<packaging>pom</packaging>
-
-	<modules>
-		<module>geoffrey-pizzeria-dao</module>
-		<module>geoffrey-pizzeria-model</module>
-		<module>geoffrey-pizzeria-console</module>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dta</groupId>
+  <artifactId>pizzeria-project</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <modules>
+		<module>pizzeria-dao</module>
+		<module>pizzeria-model</module>
+		<module>pizzeria-console</module>
+		<module>pizzeria-admin-app</module>
 	</modules>
-
-	<build>
+  
+  
+  <properties>
+  	<implementation.dao>fr.pizzeria.dao.PizzaDaoArray</implementation.dao>
+  </properties>
+  
+  <build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.6.0</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
@@ -41,15 +46,48 @@
 				<version>3.5</version>
 			</dependency>
 			<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>geoffrey-pizzeria-dao</artifactId>
-			<version>${project.version}</version>
+			<groupId>dta</groupId>
+			<artifactId>pizzeria-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>geoffrey-pizzeria-model</artifactId>
-			<version>${project.version}</version>
+			<groupId>dta</groupId>
+			<artifactId>pizzeria-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.40</version>
+    <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>org.hibernate.javax.persistence</groupId>
+    <artifactId>hibernate-jpa-2.1-api</artifactId>
+    <version>1.0.0.Final</version>
+    
+    
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>5.0.1.Final</version>
+</dependency>
+
+<dependency>
+<groupId>jstl</groupId>
+<artifactId>jstl</artifactId>
+<version>1.2</version>
+</dependency>
+
+<dependency>
+    <groupId>taglibs</groupId>
+    <artifactId>standard</artifactId>
+    <version>1.1.2</version>
+</dependency>
+
+
 		</dependencies>
 	</dependencyManagement>
 </project>

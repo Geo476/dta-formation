@@ -23,17 +23,17 @@ public class PizzaDaoArray implements PizzaDao {
 	};
 */
 	private List<Pizza> pizzas = new ArrayList<>(Arrays.asList(
-			new Pizza(20, "PEP", "Pépéroni", 12.50,CategoriePizza.VIANDE),
+			new Pizza(20, "PEP", "Pépéroni", 12.50,CategoriePizza.VIANDE,"toto"),
 
-			new Pizza(21, "REG", "Regina", 11.50,CategoriePizza.VIANDE),
-			new Pizza(22, "FRO", "La 4 fromages", 12.00,CategoriePizza.SANS_VIANDE),
+			new Pizza(21, "REG", "Regina", 11.50,CategoriePizza.VIANDE,"toto"),
+			new Pizza(22, "FRO", "La 4 fromages", 12.00,CategoriePizza.SANS_VIANDE,"toto"),
 
 
-			new Pizza(23, "SAV", "La savoyarde", 13.00,CategoriePizza.SANS_VIANDE),
+			new Pizza(23, "SAV", "La savoyarde", 13.00,CategoriePizza.SANS_VIANDE,"toto"),
 			
-			new Pizza(24, "IND", "L’indienne", 14.00,CategoriePizza.VIANDE),
+			new Pizza(24, "IND", "L’indienne", 14.00,CategoriePizza.VIANDE,"toto"),
 			
-			new Pizza(25, "GER", "La Gerbouille", 15.50,CategoriePizza.POISSON)
+			new Pizza(25, "GER", "La Gerbouille", 15.50,CategoriePizza.POISSON,"toto")
 	));
 	
 	

@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import fr.pizzeria.Exception.*;
+import fr.pizzeria.model.Client;
 import fr.pizzeria.model.Pizza;
 
 public interface PizzaDao {
 
 	List<Pizza>	findAllPizzas();
+	
 //	boolean saveNewPizza(Pizza pizza);
 //	boolean updatePizza(String codePizza, Pizza pizza);
 //	boolean deletePizza(String codePizza);
@@ -19,4 +21,8 @@ public interface PizzaDao {
 	public Optional<Pizza> findPizzaByCode(String codePizza);
 	
 	boolean isCodeExist(String codePizza);
+
+	
+	
+	//boolean saveNewClient(Client client) throws SavePizzaException;
 }

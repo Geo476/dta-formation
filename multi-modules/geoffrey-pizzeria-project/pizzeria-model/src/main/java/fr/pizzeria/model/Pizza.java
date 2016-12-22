@@ -12,7 +12,8 @@ import javax.persistence.Id;
 public class Pizza {
 
 	
-	@Id 
+	@Id
+	@Column (name="ID_PIZ")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
@@ -29,20 +30,26 @@ public class Pizza {
 	@Column(name="CATEGORIE")
 	private CategoriePizza cat;
 	
-	public static int nbPizzas;
+	
+	@Column(name="URL_IMG")
+	private String url;
+	
+	
+	public static int nbPizzas; 
 
 
 	public Pizza() {
 		super();
 	}
 
-	public Pizza(Integer id, String code, String nom, double prix,CategoriePizza cat) {
+	public Pizza(Integer id, String code, String nom, double prix,CategoriePizza cat, String url) {
 		super();
 		this.id = id;
 		this.code = code;
 		this.nom = nom;
 		this.prix = prix;
 		this.cat = cat;
+		this.url = url;
 	}
 
 	public int getId() {
@@ -77,6 +84,15 @@ public class Pizza {
 		this.prix = prix;
 	}
 
+	
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
 	public static int getNbPizzas() {
 		return nbPizzas;
 	}
